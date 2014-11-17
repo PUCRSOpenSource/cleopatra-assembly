@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
+
+#Exercício 1
 def div(n, grupo):
     divisor = grupo + 5
     res = n
     while res >= grupo:
         res -= divisor
     
-    return res == 0
+    return res
 
 def mult_sum(a, b):
     res = 0
@@ -14,6 +16,7 @@ def mult_sum(a, b):
         b-=1
     return res
         
+#Exercício 7
 def pot(n, exp):
     res = 1
     while exp > 0:
@@ -21,14 +24,18 @@ def pot(n, exp):
         exp -=1
     print (res)
     return res
+
+#Exercício 12
 def fib(n):
     a, b, c = 0, 1, 0
+    res = []
     while c < n:
         print (a, end=" ")
         a, b = b, a+b
         c+=1
     print("\n")
 
+#Exercício 21
 def diag(matrix):
     res = 1
     for i in range(len(matrix)):
