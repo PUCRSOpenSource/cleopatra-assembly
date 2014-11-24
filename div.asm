@@ -9,9 +9,17 @@
     ENQUANTO:
         lda resto
         add divisor
-        jz  FIM 
-        jn  RESTO
+        jz  DIVIDE 
+        jn  SOBRA
+        sta resto
         jmp ENQUANTO
+    SOBRA:
+        lda #0
+        sta resp
+        jmp FIM
+    DIVIDE:
+        lda #1
+        sta resp        
     FIM:
         hlt
 .ENDCODE
@@ -20,5 +28,6 @@
    grupo:   db  #1
    divisor: db  #0
    resto:   db  #0
-   num:     db  #10 ;Num a ser testado 
+   num:     db  #12 ;Num a ser testado 
+   resp:    db  #01
 .ENDDATA
