@@ -9,8 +9,8 @@
     ENQUANTO:
         lda resto
         add divisor
-        jz  FIM
-        jn  FIM
+        jz  FIM 
+        jn  RESTO
         jmp ENQUANTO
     FIM:
         hlt
