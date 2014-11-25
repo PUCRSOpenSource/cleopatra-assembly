@@ -25,9 +25,9 @@
 .ENDCODE
 
 .DATA
+   num:     db  #12 ;Num a ser testado 
+   resp:    db  #01
    grupo:   db  #1
    divisor: db  #0
    resto:   db  #0
-   num:     db  #12 ;Num a ser testado 
-   resp:    db  #01
 .ENDDATA
