@@ -47,9 +47,7 @@ print("POT(3,3):" + str(pot(3,3)))
 print("DIV(12,1):" + str(div(12,1)))
 
 matrix = [[0 for x in range(5)] for x in range(5)] 
-for x in range(5):
-    for y in range(5):
-        matrix[x][y] = x+y+
+matrix = [ [1,2,2,2,2], [2,2,2,2,2], [2,2,3,2,2], [2,2,2,4,2], [2,2,2,2,5] ]
 p1rint('MATRIX:')
 print('\n'.join([''.join(['{:4}'.format(item) for item in row])for row in matrix]))
 print(diag(matrix))

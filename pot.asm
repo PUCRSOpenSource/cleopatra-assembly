@@ -6,7 +6,7 @@ INIT:
 	sta res
 	lda exp
 	add #-1
-      sta exp
+    sta exp
 	jmp INIT
 		MULT_SUM:
             lda #0
