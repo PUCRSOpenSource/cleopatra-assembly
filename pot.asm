@@ -1,36 +1,39 @@
 .CODE
-    lda exp
-    INIT:
-        jz  FIM
-        jsr MULT_SUM
-        sta res
-        lda exp
-        add #-1
-        sta exp
-        jmp INIT
-    MULT_SUM:
-        lda n
-        sta aux
-        lda aux
-        LOOP:
-            jz FIMLOOP
-            lda res
-            add n
-            sta res
-            lda aux
-            add #-1
-            sta aux
-            jmp LOOP
-            FIMLOOP
-                lda res
-                rts
-    FIM:
-        hlt
+INIT:
+	lda exp
+	jz  FIM,R
+	jsr MULT_SUM,R
+	sta res
+	lda exp
+	add #-1
+      sta exp
+	jmp INIT
+		MULT_SUM:
+            lda #0
+            sta resAux
+		lda n
+		sta aux
+		LOOP2:
+			jz FIMLOOP2,R
+			add #-1
+			sta aux
+			lda resAux
+			add res
+			sta resAux
+			lda aux
+			jmp LOOP2,R
+		FIMLOOP2:
+			lda resAux
+			rts
+	FIM:
+		hlt
 .ENDCODE
 
 .DATA
-   num:     db  #2      ;Num
-   exp:     db  #10     ;Expoente
-   aux:     db  #0
-   res:     db  #0      ;Resultado
+	n:		db	#3
+	exp:		db	#3
+	res:	db	#1      ;respota
+
+	aux:	db	#0      
+	resAux:	db	#0
 .ENDDATA

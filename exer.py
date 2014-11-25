@@ -22,7 +22,6 @@ def pot(n, exp):
     while exp > 0:
         res = mult_sum(res, n)        
         exp -=1
-    print (res)
     return res
 
 #Exercício 12
@@ -30,7 +29,7 @@ def fib(n):
     a, b, c = 0, 1, 0
     res = []
     while c < n:
-        print (a, end=" ")
+        res[a] = b
         a, b = b, a+b
         c+=1
     print("\n")
@@ -43,14 +42,14 @@ def diag(matrix):
         res = mult_sum(res, el)
     return res
 
-print("FIB:")
-fib(7)
+print("FIB:" + str(fib(7)))
 print("POT(3,3):" + str(pot(3,3)))
 print("DIV(12,1):" + str(div(12,1)))
+
 matrix = [[0 for x in range(5)] for x in range(5)] 
 for x in range(5):
     for y in range(5):
-        matrix[x][y] = x+y+1
-print('MATRIX:')
+        matrix[x][y] = x+y+
+p1rint('MATRIX:')
 print('\n'.join([''.join(['{:4}'.format(item) for item in row])for row in matrix]))
 print(diag(matrix))

@@ -1,17 +1,20 @@
 .CODE
     INIT:
-        jsr SEQFIBONACCI
         lda #0
         sta n1
         lda #1
         sta n2
+        jsr SEQFIBONACCI
+        jmp FIM
         SEQFIBONACCI:
             lda p
             add #2
             sta p
             lda n
+            add #-2
+            sta n
             LOOP:
-                jz  FIM
+                jz  FIMLOOP
                 lda n1
                 add n2
                 sta nxt
@@ -25,14 +28,20 @@
                 lda n
                 add #-1
                 sta n
-                jmp INIT
+                jmp LOOP
+            FIMLOOP:
+                lda nxt
+                rts     
+    FIM:
+        hlt
+                     
 .ENDCODE
 
 .DATA
-    n:      db  #7      ;Seq FIB
+    n:      db  #10      ;Seq FIB
     n1:     db  #0
     n2:     db  #1
     nxt:    db  #0
-    p:      db  #vet
-    vet:    db  #0, #1, #0, #0, #0, #0, #0
+    p:      db  #idx
+    idx:    db  #0, #1, #0, #0, #0, #0, #0
 .ENDDATA
