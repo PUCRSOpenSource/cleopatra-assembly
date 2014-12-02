@@ -1,0 +1,72 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc} 
+\usepackage[brazilian]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage{algorithm} 
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{graphicx,url,float}
+\usepackage{latexsym}
+\usepackage{sbc-template}
+\usepackage{listings} 
+\usepackage{color} 
+\usepackage{verbatim} 
+
+\lstset{frame=tb,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    language=python,
+    breakatwhitespace=true
+    tabsize=3
+}
+
+\graphicspath{{images/}}
+
+
+\sloppy
+
+\title{Programação em Linguagem de Montagem}
+
+\author{Diego Pinto da Jornada}
+
+\address{Faculdade de Informática -- Pontifícia Universidade Católica do Rio Grande do Sul\\
+  (PUCRS)
+  \email{diego.jornada@acad.pucrs.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{resumo}
+    
+
+    
+\end{resumo}
+
+\input{./sections/introduction.tex}
+
+\input{./sections/exer1.tex}
+
+\input{./sections/exer7.tex}
+
+\input{./sections/exer12.tex}
+
+\input{./sections/exer21.tex}
+
+\bibliographystyle{sbc}
+\bibliography{report}
+
+\end{document}
