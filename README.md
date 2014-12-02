@@ -8,7 +8,7 @@ seguintes enunciados:
 + Descobrir se um número _n_ positivo é múltiplo de 6.
 
 + Faça um programa que contenha a função Potencia . Esta função deve ser capaz
-  de receber dois valores _V_ e _EXP_ e ter como saída $V^EXP$ . Esta saída deve estar
+  de receber dois valores _V_ e _EXP_ e ter como saída V^EXP. Esta saída deve estar
   associada ao acumulador.acumulador
 
 + Fazer um programa que gere os _n_ primeiros números da sequência de
